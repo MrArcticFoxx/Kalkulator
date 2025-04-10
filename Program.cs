@@ -27,5 +27,34 @@ class Program
     case "/":
             calculation = new division();
             break;
+    default:
+            Console.WriteLine("Nieobsługiwany operator.");
+            return;
    }
+
+   try
+  {
+
+    double result = calculation.Execute(a, b);
+    Console.WriteLine($"Wynik: {result}");
+      
+
+    if(EasterEggHandler.check(a, b, op, result, out string eggMessage)) 
+    {
+        Console.WriteLine(eggMessage);
+        if(string.IsNullOrEmpty(url))
+        {
+            LinkHelper.OpenURL(url)
+        }
+    }  
+ }
+    catch (DivideByZeroExeption ex)
+    {
+      Console.WriteLine($"Błąd: {ex.Message}");
+
+    }
+    catch (Execption ex)
+    {
+        Console.WriteLine($"Wystąpił nieoczekiwany błąd: {ex.Message}");
+    }
 }

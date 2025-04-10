@@ -27,9 +27,10 @@ public stacic bool check(double a, double b, string op, double result, out strin
       {
         Console.WriteLine("PAN JEZUS JUŻ SIĘ ZBLIŻA...");
         linkHelper.OpenURL("https://www.youtube.com/watch?v=fimrULqiExA");
+        return true;
       }
-
-
+ 
+    return false;
    }
 
 }
