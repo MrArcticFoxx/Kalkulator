@@ -18,13 +18,13 @@ public static class LinkHelper
             }
             else if(RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
             {
-                Process.Start("open", url)
+                Process.Start("open", url);
             }
             
         }
-        catch (Execption ex)
+        catch (Exception ex)
         {
-            Console.WriteLine($"Nie udało się otworzyć linku: {ex.MEssage}");
+            Console.WriteLine($"Nie udało się otworzyć linku: {ex.Message}");
         }
     }
 
